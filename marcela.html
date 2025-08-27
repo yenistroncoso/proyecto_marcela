@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Marcela Julio | Fisioterapeuta en [Roble - Sucre] - Rehabilitación y masajes</title>
+  <meta name="description" content="Fisioterapeuta con atención domiciliaria. Rehabilitación física, masajes terapéuticos, ejercicios posturales y geriatría." />
+  <meta property="og:title" content="Marcela Julio | Fisioterapeuta en [Roble - Sucre] - Rehabilitación y masajes" />
+  <meta property="og:description" content="Agenda tu cita de fisioterapia a domicilio. Rehabilitación, masaje terapéutico y movilidad." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Allura&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" referrerpolicy="no-referrer" />
+  <style>
+    :root{
+      --bg:#fff9f7;
+      --primary:#e8b6a7;        /* suave rosado/beige */
+      --primary-600:#d99a86;
+      --text:#1d1d1f;
+      --muted:#6b7280;
+      --card:#ffffff;
+      --ring:rgba(233, 164, 145, .45);
+      --accent:#2ecc71;        /* CTA */
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:"Montserrat",system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--text);background:var(--bg)}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+
+    /* Header */
+    .nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.7);backdrop-filter:saturate(180%) blur(10px);border-bottom:1px solid #f1e7e4}
+    .container{max-width:1100px;margin-inline:auto;padding:0 1.25rem}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px}
+    .brand{display:flex;align-items:center;gap:.75rem}
+    .brand-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+  color: white;
+  background: var(--primary);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
+
+    .brand-name{font-weight:700;letter-spacing:.2px}
+    .brand-script{font-family:"Allura", cursive;font-size:1.35rem;color:var(--primary-600)}
+
+    .menu{display:flex;gap:1rem}
+    .menu a{padding:.5rem .75rem;border-radius:999px}
+    .menu a:hover{background:#f7ebe7}
+    .hamb{display:none;font-size:1.25rem;border:none;background:transparent}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1.05fr .95fr;gap:2rem;align-items:center;padding:56px 0 24px}
+    .badge{display:inline-flex;align-items:center;gap:.5rem;background:#fff;border:1px solid #f1e7e4;padding:.35rem .6rem;border-radius:999px;font-size:.85rem;color:var(--muted)}
+    .title{font-size:clamp(1.8rem, 2.8vw + .5rem, 3rem);line-height:1.1;margin:.5rem 0}
+    .title .script{font-family:"Allura", cursive;color:var(--primary-600);display:block;font-size:1.2em}
+    .lead{color:var(--muted);max-width:55ch}
+    .cta-row{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1rem}
+    .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.9rem 1.1rem;border-radius:14px;border:1px solid transparent;transition:.2s ease}
+    .btn-primary{background:var(--accent);color:white}
+    .btn-primary:hover{filter:saturate(1.05) brightness(1.02)}
+    .btn-ghost{border-color:#ecd8d2;background:#fff}
+    .btn-ghost:hover{background:#f8efed}
+    .hero-card{position:relative;background:linear-gradient(180deg,#fff, #ffeae3);border:1px solid #f1e7e4;padding:1rem;border-radius:22px;box-shadow:0 10px 30px rgba(233,164,145,.18)}
+    .hero-photo{aspect-ratio:1/1;border-radius:18px;object-fit:cover;border:6px solid #fff;box-shadow:0 8px 24px rgba(0,0,0,.06)}
+    .chip{position:absolute;bottom:12px;left:12px;background:#fff;border:1px solid #f1e7e4;padding:.35rem .6rem;border-radius:999px;display:flex;align-items:center;gap:.5rem}
+
+    /* Section */
+    section{padding:72px 0}
+    .section-title{font-size:1.8rem;margin:0 0 .5rem}
+    .section-desc{color:var(--muted);max-width:65ch}
+
+    /* Services */
+    .cards{margin-top:1.5rem;display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+    .card{background:var(--card);border:1px solid #f1e7e4;border-radius:18px;padding:1rem;transition:transform .2s, box-shadow .2s}
+    .card:hover{transform:translateY(-4px);box-shadow:0 10px 26px var(--ring)}
+    .card h3{margin:.2rem 0 .35rem;font-size:1.05rem}
+    .card p{margin:0;color:var(--muted);font-size:.95rem}
+    .icon{width:40px;height:40px;display:grid;place-items:center;border-radius:12px;background:#fff3ef;border:1px solid #f1e7e4;margin-bottom:.5rem}
+
+    /* Benefits */
+    .list{margin:.75rem 0 0;padding:0;list-style:none;display:grid;gap:.5rem}
+    .list li{display:flex;gap:.6rem;align-items:flex-start}
+    .list i{margin-top:.25rem;color:var(--primary-600)}
+
+    /* Testimonials */
+    .testi{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1.25rem}
+    .quote{background:#fff;border:1px solid #f1e7e4;border-radius:18px;padding:1rem}
+    .quote p{margin:0 0 .6rem}
+    .stars{letter-spacing:1px}
+
+    /* Contact */
+    .contact-wrap{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1rem}
+    form{background:#fff;border:1px solid #f1e7e4;border-radius:18px;padding:1rem}
+    .field{display:grid;gap:.35rem;margin-bottom:.75rem}
+    .field input,.field textarea{width:100%;padding:.8rem;border-radius:12px;border:1px solid #e9d6d1;background:#fff}
+    .field textarea{min-height:120px}
+    .contact-card{background:linear-gradient(180deg,#fff, #ffeae3);border:1px solid #f1e7e4;border-radius:18px;padding:1rem}
+
+    /* Footer */
+    footer{padding:28px 0;border-top:1px solid #f1e7e4;color:var(--muted)}
+
+    /* WhatsApp bubble */
+    .wa-fab{position:fixed;right:16px;bottom:16px;display:inline-flex;align-items:center;gap:.6rem;background:#25D366;color:white;padding:.85rem 1rem;border-radius:999px;box-shadow:0 10px 26px rgba(0,0,0,.16);z-index:60}
+    .wa-fab i{font-size:1.2rem}
+
+    /* Responsive */
+    @media (max-width:1000px){
+      .hero{grid-template-columns:1fr;gap:1rem}
+      .cards{grid-template-columns:repeat(2,1fr)}
+      .testi{grid-template-columns:1fr 1fr}
+      .contact-wrap{grid-template-columns:1fr}
+    }
+    @media (max-width:720px){
+      .menu{display:none}
+      .hamb{display:block}
+      .cards{grid-template-columns:1fr}
+      .testi{grid-template-columns:1fr}
+      .nav.open .menu{display:flex;flex-direction:column;position:absolute;top:64px;left:0;right:0;background:#fff;border-bottom:1px solid #f1e7e4;padding:1rem}
+    }
+  </style>
+</head>
+<body>
+  <!-- Nav -->
+  <nav class="nav" id="top">
+    <div class="container nav-inner">
+      <a class="brand" href="#top" aria-label="Inicio">
+        <span class="brand-logo" aria-hidden="true">MJ</span>
+        <span class="brand-name">Marcela Julio <span class="brand-script">Fisioterapeuta</span></span>
+      </a>
+      <button class="hamb" aria-label="Abrir menú" id="hamb"><i class="fa-solid fa-bars"></i></button>
+      <div class="menu" id="menu">
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#beneficios">Beneficios</a>
+        <a href="#testimonios">Testimonios</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="container hero">
+    <div>
+      <span class="badge"><i class="fa-solid fa-house-medical"></i> Atención a domicilio</span>
+      <h1 class="title">
+        <span class="script">Hola, soy</span>
+        Marcela Julio – Fisioterapeuta
+      </h1>
+      <p class="lead">Te acompaño en tu proceso de <strong>rehabilitación</strong> y <strong>bienestar</strong> con terapias personalizadas, masajes y ejercicios para mejorar tu postura y movilidad. ¡Vamos a recuperar tu mejor versión!</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://wa.me/573024613037?text=Hola%20Marcela%2C%20quiero%20agendar%20una%20cita%20de%20fisioterapia" target="_blank" rel="noopener">
+          <i class="fa-brands fa-whatsapp"></i> Agendar cita
+        </a>
+        <a class="btn btn-ghost" href="#servicios"><i class="fa-solid fa-clipboard-list"></i> Ver servicios</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <!-- Reemplaza src con tu foto: ./assets/marcela.jpg -->
+      <img class="hero-photo" src="imagen-mejorada.jpg" alt="Marcela Julio, fisioterapeuta"/>
+      <div class="chip"><i class="fa-solid fa-phone"></i> 302 461 3037</div>
+    </div>
+  </header>
+
+  <!-- Sobre mí -->
+  <section id="sobre-mi">
+    <div class="container">
+      <h2 class="section-title">Sobre mí</h2>
+      <p class="section-desc">Soy fisioterapeuta con enfoque humano y basado en evidencia. Trabajo contigo para aliviar el dolor, recuperar funciones y mejorar tu calidad de vida. Atiendo en casa con equipos y técnicas seguras, priorizando tu comodidad.</p>
+      <ul class="list">
+        <li><i class="fa-solid fa-circle-check"></i> Atención amable y personalizada</li>
+        <li><i class="fa-solid fa-circle-check"></i> Evaluación inicial y plan de tratamiento</li>
+        <li><i class="fa-solid fa-circle-check"></i> Acompañamiento y seguimiento del progreso</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Servicios -->
+  <section id="servicios">
+    <div class="container">
+      <h2 class="section-title">Servicios</h2>
+      <p class="section-desc">Programas adaptados a tu necesidad, edad y condición. Puedes combinar terapias según tus objetivos.</p>
+      <div class="cards">
+        <article class="card">
+          <div class="icon"><i class="fa-solid fa-person-walking"></i></div>
+          <h3>Rehabilitación física</h3>
+          <p>Recupera la funcionalidad tras lesiones, cirugías o dolor crónico.</p>
+        </article>
+        <article class="card">
+          <div class="icon"><i class="fa-solid fa-hand-holding-heart"></i></div>
+          <h3>Masajes terapéuticos</h3>
+          <p>Relaja tejidos, reduce tensión y alivia contracturas musculares.</p>
+        </article>
+        <article class="card">
+          <div class="icon"><i class="fa-solid fa-child-reaching"></i></div>
+          <h3>Postura y movilidad</h3>
+          <p>Ejercicios guiados para mejorar postura, equilibrio y rango de movimiento.</p>
+        </article>
+        <article class="card">
+          <div class="icon"><i class="fa-solid fa-heart-pulse"></i></div>
+          <h3>Geriatría</h3>
+          <p>Programas para mantener <em>movilidad y fuerza</em> en adultos mayores.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Beneficios -->
+  <section id="beneficios">
+    <div class="container">
+      <h2 class="section-title">¿Por qué elegir mis terapias?</h2>
+      <ul class="list">
+        <li><i class="fa-solid fa-circle-check"></i> Comodidad de atención domiciliaria</li>
+        <li><i class="fa-solid fa-circle-check"></i> Tratamientos basados en evidencia</li>
+        <li><i class="fa-solid fa-circle-check"></i> Resultados medibles y seguimiento</li>
+      </ul>
+      <div class="cta-row" style="margin-top:1rem">
+        <a class="btn btn-primary" href="https://wa.me/573024613037?text=Hola%20Marcela%2C%20quiero%20agendar%20una%20valoraci%C3%B3n" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> Reserva tu valoración</a>
+        <a class="btn btn-ghost" href="#contacto"><i class="fa-solid fa-envelope"></i> Escríbeme</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonios -->
+  <section id="testimonios">
+    <div class="container">
+      <h2 class="section-title">Testimonios</h2>
+      <p class="section-desc">Lo que dicen algunos pacientes sobre mi trabajo.</p>
+      <div class="testi">
+        <div class="quote">
+          <div class="stars">★★★★★</div>
+          <p>“Excelente profesional. Me ayudó con un dolor muscular.”</p>
+          <small>— Fernando M.</small>
+        </div>
+        <div class="quote">
+          <div class="stars">★★★★★</div>
+          <p>“Muy paciente, dedicada y siempre sonriente. Tenía inflamación en la espalda y ella me ayudó a recuperarme en gran manera.”</p>
+          <small>— Yenis T.</small>
+        </div>
+        <div class="quote">
+          <div class="stars">★★★★★</div>
+          <p>“La atención en casa es muy cómoda y los ejercicios son fáciles de seguir.”</p>
+          <small>— Aura A.</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto">
+    <div class="container">
+      <h2 class="section-title">Contacto</h2>
+      <p class="section-desc">Agenda por WhatsApp o envía el formulario y me comunicaré contigo.</p>
+      <div class="contact-wrap">
+        <form id="contactForm" action="https://formspree.io/f/xwpnpkqp" method="POST">
+          <div class="field">
+            <label for="name">Nombre</label>
+            <input id="name" name="name" type="text" placeholder="Tu nombre" required />
+          </div>
+          <div class="field">
+            <label for="email">Correo</label>
+            <input id="email" name="email" type="email" placeholder="tucorreo@ejemplo.com" required />
+          </div>
+          <div class="field">
+            <label for="msg">Mensaje</label>
+            <textarea id="msg" name="message" placeholder="Cuéntame brevemente tu caso" required></textarea>
+          </div>
+          <button class="btn btn-primary" type="submit"><i class="fa-solid fa-paper-plane"></i> Enviar</button>
+        </form>
+        <div class="contact-card">
+          <h3>Información directa</h3>
+          <p><i class="fa-solid fa-phone"></i> <strong>302 461 3037</strong></p>
+          <p><i class="fa-brands fa-whatsapp"></i> WhatsApp disponible</p>
+          <p><i class="fa-solid fa-location-dot"></i> Atención domiciliaria</p>
+          <div class="cta-row"><a class="btn btn-ghost" href="tel:+573024613037"><i class="fa-solid fa-phone"></i> Llamar</a>
+          <a class="btn btn-primary" href="https://wa.me/573024613037?text=Hola%20Marcela%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20como%20funciona%20todo%20esto" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap">
+      <small>© <span id="y"></span> Marcela Julio — Fisioterapeuta</small>
+      <a href="#top" class="btn btn-ghost" aria-label="Volver arriba"><i class="fa-solid fa-arrow-up"></i></a>
+    </div>
+  </footer>
+
+  <a class="wa-fab" href="https://wa.me/573024613037?text=Hola%20Marcela%2C%20me%20gustar%C3%ADa%20agendar%20una%20cita" target="_blank" rel="noopener" aria-label="Chatea por WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i> Chat WhatsApp
+  </a>
+
+  <script>
+    // Año dinámico
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // Menú hamburguesa + animación icono
+    const nav = document.querySelector('.nav');
+    const hamb = document.getElementById('hamb');
+    const menu = document.getElementById('menu');
+    hamb.addEventListener('click', ()=>{
+      nav.classList.toggle('open');
+      const i = hamb.querySelector('i');
+      i.classList.toggle('fa-bars');
+      i.classList.toggle('fa-times');
+    });
+
+    // Scroll suave extra para enlaces internos (mejora UX en iOS antiguos)
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        const id = a.getAttribute('href');
+        if(id.length>1){
+          e.preventDefault();
+          document.querySelector(id).scrollIntoView({behavior:'smooth'});
+          nav.classList.remove('open');
+          hamb.querySelector('i').classList.add('fa-bars');
+          hamb.querySelector('i').classList.remove('fa-times');
+        }
+      })
+    })
+
+    // Validación ligera del formulario (si usas Formspree cambia action)
+    const form = document.getElementById('contactForm');
+    form.addEventListener('submit', (e)=>{
+      if(form.action.includes('your-id')){
+        e.preventDefault();
+        alert('Para activar el formulario, reemplaza la URL de Formspree en el atributo action. Por ahora usa WhatsApp.');
+      }
+    })
+  </script>
+</body>
+</html>
